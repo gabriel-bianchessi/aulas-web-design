@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      min-height: 100vh;
+
+      background: #2b3466;
+      background: linear-gradient(0deg, #f1f1f1 0%, #f1f1f1 50%, #2b3466 50%, #2b3466 100%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 460px;
+      height: fit-content;
+      padding: 32px;
+
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 24px;
+
+      img {
+        height: 64px;
+        width: 64px;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #2b3466;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 12px;
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        label {
+          color: #b7b7b7;
+        }
+
+        input {
+          border: 1px solid #b7b7b7;
+          padding: 12px
+        }
+      }
+
+      .checkbox-group {
+
+        padding: 12px 0;
+
+        input {
+          scale: 1.25;
+          cursor: pointer;
+        }
+
+        label {
+          color: #b7b7b7;
+          margin-left: 4px;
+          font-size: 14px;
+        }
+      }
+
+      button {
+        width: 100%;
+        padding: 16px;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: bold;
+
+        background-color: #2b3466;
+        color: #ffffff;
+        border: none;
+
+        transition: color 150ms;
+
+        &:hover {
+          background-color: #ffffff;
+          color: #2b3466;
+          outline: 1px solid #2b3466;
+          cursor: pointer;
+        }
+      }
+    }
+
+    footer .links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      gap: 16px;
+
+
+      a {
+        color: #b7b7b7;
+        text-decoration: none;
+        font-size: 14px;
+
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-card">
+
+      <div class="logo">
+        <img src="./brain-circuit.svg" alt="Logo com um cérebro conectado em circuitos elétricos" />
+        <h1>Creative Company</h1>
+      </div>
+      <form action="">
+        <div class="input-group">
+          <label for="email">Usuário ou e-mail</label>
+          <input name="email" type="text" />
+        </div>
+        <div class="input-group">
+          <label for="password">Usuário ou e-mail</label>
+          <input name="password" type="password" />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" for="keep-loged-in" />
+          <label for="keep-loged-in">Manter logado</label>
+        </div>
+        <div>
+          <button type="submit">
+            Login
+          </button>
+        </div>
+      </form>
+      <footer>
+        <div class="links">
+          <a href="#">Registrar-se</a>
+          <a href="#">Esqueceu a senha?</a>
+          <a href="#"><img src="./move-left.svg" /> Voltar para WPBrigade</a>
+        </div>
+      </footer>
+    </div>
+</body>
+
+</html>

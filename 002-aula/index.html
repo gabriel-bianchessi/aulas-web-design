@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casinha de Sapê</title>
+  <style>
+    *,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      min-height: 100vh;
+      width: 100%;
+
+      display: grid;
+      grid-template-rows: 4fr 1fr;
+    }
+
+    footer {
+      background-color: green;
+    }
+
+    main {
+      background-color: skyblue;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+
+
+    .tree-container {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      flex-direction: column;
+
+      .tronco {
+        background-color: brown;
+        width: 60px;
+        height: 150px;
+      }
+
+      .copa {
+        background-color: green;
+        width: 400px;
+        height: 250px;
+        border-radius: 48px;
+      }
+    }
+
+    .house-container {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      flex-direction: column;
+    }
+
+    .roof {
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 0 400px 125px 400px;
+      border-color: transparent transparent #FF4532 transparent;
+      transform: rotate(0deg);
+    }
+
+    .house-body {
+      width: 700px;
+      height: 250px;
+
+      background-color: #e5e5f7;
+      background-image: linear-gradient(to right, #444cf7, #444cf7 5px, #e5e5f7 5px, #e5e5f7);
+      background-size: 70px 100%;
+
+      display: flex;
+      align-items: end;
+      justify-content: center;
+
+      .porta-container {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        .porta {
+          background-color: oklch(0.286 0.066 53.813);
+          width: 60%;
+          height: 80%;
+        }
+
+      }
+
+      .janela-container {
+        width: 100%;
+        height: 100%;
+
+        .janela {
+          background-color: blue;
+
+          height: 50%;
+          width: 50%;
+        }
+      }
+    }
+
+    .pillars-container {
+      width: 700px;
+      height: 50px;
+
+      display: flex;
+      justify-content: space-between;
+
+      .pillar {
+        background-color: oklch(0.286 0.066 53.813);
+        height: 100%;
+        width: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <div class="house-container">
+
+        <div class="roof"></div>
+        <div class="house-body">
+          <div class="janela-container">
+            <div class="janela"></div>
+          </div>
+          <div class="porta-container">
+            <div class="porta"></div>
+          </div>
+          <div class="janela-container">
+            <div class="janela"></div>
+          </div>
+        </div>
+        <div class="pillars-container">
+          <div class="pillar"></div>
+          <div class="pillar"></div>
+          <div class="pillar"></div>
+          <div class="pillar"></div>
+        </div>
+      </div>
+      <div class="tree-container">
+        <div class="copa"></div>
+        <div class="tronco"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+
+</html>

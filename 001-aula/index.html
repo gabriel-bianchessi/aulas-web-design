@@ -19,10 +19,11 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: sans-serif;
     }
 
     header {
-      width: 100vw;
+      width: 100%;
       padding: 1rem;
       text-align: center;
       background-color: yellow;
@@ -30,7 +31,7 @@
     }
 
     h1 {
-      font-family: 'ShadowHand';
+      font-family: 'ShadowHand', sans-serif;
       color: red;
       font-size: 3.5rem;
       font-weight: bold;
@@ -40,6 +41,117 @@
       width: 100%;
       max-width: 1200px;
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-bottom: 32px;
+    }
+
+    .links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .link1 {
+      width: fit-content;
+      padding: 1.25rem 3rem;
+
+      background-color: #ff0095;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      box-shadow: 4px 3px 5px 1px rgba(0, 0, 0, 0.5);
+
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .link2 {
+      background-color: #eb6607;
+      color: white;
+      text-transform: uppercase;
+      text-decoration: none;
+      width: fit-content;
+      padding: 1rem 3rem;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .link3 {
+      display: flex;
+      gap: 24px;
+
+      a {
+        padding: 1rem ;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        height: fit-content;
+        font-weight: bold;
+      }
+
+      a:not(:first-child) {
+        background-color: white;
+        color: black;
+        border: 1px solid #00000050;
+      }
+
+      :first-child {
+        background-color: black;
+        color: white;
+      }
+    }
+
+    .link4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      gap: 4px;
+      padding: 8px;
+      border-radius: 4px;
+      box-shadow: 3px 3px 7px 1px rgba(0, 0, 0, 0.5);
+      color: #000;
+    }
+
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      grid-template-areas:
+        "image1 image1 image2 image3"
+        "image1 image1 image4 image5";
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-grid img:nth-child(1) {
+      grid-area: image1;
+    }
+
+    .image-grid img:nth-child(2) {
+      grid-area: image2;
+    }
+
+    .image-grid img:nth-child(3) {
+      grid-area: image3;
+    }
+
+    .image-grid img:nth-child(4) {
+      grid-area: image4;
+    }
+
+    .image-grid img:nth-child(5) {
+      grid-area: image5;
     }
   </style>
 </head>
@@ -50,24 +162,55 @@
     <h1>Vombate</h1>
   </header>
   <main>
-    <img src="./chewing-wombat.gif">
-    <p>
-      Vombate é um animal marsupial originário da Austrália. Os fascólomos pertencem à família Vombatidae. São
-      quadrúpedes atarracados, com aproximadamente um metro de comprimento, com uma cauda curta e grossa. São adaptados
-      em
-      sua tolerância de habitat, são encontrados em áreas florestais, montanhosas e em charnecas do Sul da Austrália,
-      incluindo a Tasmânia, bem como uma faixa isolada de cerca de 300 hectares no Parque Nacional de Epping Forest, no
-      centro do estado australiano de Queenslândia.
+    <section>
+      <div class="image-grid">
+        <img src="./chewing-wombat.gif">
+        <img src="./wombat-cocando-bunda.gif">
+        <img src="./wombat-lavanderia.gif">
+        <img src="./wombat-cocando.gif">
+        <img src="./wombat-no-colo.gif">
+        <img src="./wombat-vassoura.gif">
+      </div>
 
-      Os vombates são conhecidos por serem os únicos animais no mundo que produzem fezes em forma de cubo.
-    </p>
-    <p>
-      Disponível em:
-      <a href="https://pt.wikipedia.org/wiki/Vombate" alt="Link para a página da Wikipedia referente ao Wombat"
-        target="_blank">
-        Wikipedia
+    </section>
+    <section>
+      <p>
+        Vombate é um animal marsupial originário da Austrália. Os fascólomos pertencem à família Vombatidae. São
+        quadrúpedes atarracados, com aproximadamente um metro de comprimento, com uma cauda curta e grossa. São adaptados
+        em
+        sua tolerância de habitat, são encontrados em áreas florestais, montanhosas e em charnecas do Sul da Austrália,
+        incluindo a Tasmânia, bem como uma faixa isolada de cerca de 300 hectares no Parque Nacional de Epping Forest, no
+        centro do estado australiano de Queenslândia.
+  
+        Os vombates são conhecidos por serem os únicos animais no mundo que produzem fezes em forma de cubo.
+      </p>
+      <p>
+        Disponível em:
+  
+        <a class="link1" href="https://pt.wikipedia.org/wiki/Vombate"
+          alt="Link para a página da Wikipedia referente ao Wombat" target="_blank">
+          Wikipedia
+        </a>
+      </p>
+
+    </section>
+    <div class="links">
+
+      <a class="link2" href="#">
+        Cadastre-se para<br />
+        receber e-mails
       </a>
-    </p>
+      <div class="link3">
+        <a href="#">Grand America Touring</a>
+        <a href="#">Cruiser</a>
+        <a href="#">Adventure Touring</a>
+        <a href="#">Sport</a>
+      </div>
+      <a href="#" class="link4">
+        <img src="./user.svg" alt="Ícone de Usuário">
+        Entrar
+      </a>
+    </div>
 
   </main>
 </body>
